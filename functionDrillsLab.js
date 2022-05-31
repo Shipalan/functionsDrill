@@ -61,6 +61,12 @@ printName("Alan")             //Call argument
 
 //CODE HERE
 
+function greeting(name){
+  console.log(`Hello, ${name}`);
+}
+
+greeting(Jake);
+
 
 ////////////////// PROBLEM 5 ////////////////////
 
