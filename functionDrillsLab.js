@@ -65,7 +65,7 @@ function greeting(name){
   console.log(`Hello, ${name}`);
 }
 
-greeting(Jake);
+greeting('Jake');
 
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -81,6 +81,15 @@ greeting(Jake);
 
 //CODE HERE
 
+const compareNums = (a, b) => {
+  if (a > b){    
+    return console.log(a);
+  } else {    
+    return console.log(b);
+  }
+}
+
+compareNums(5, 7);
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -92,7 +101,13 @@ greeting(Jake);
 
 //CODE HERE
 
+function add (num1, num2){
+  num1 = +num1
+  num2 = +num2
+   return console.log(num1 + num2);
+}
 
+let sum = add('5', 6);
 ////////////////// PROBLEM 7 ////////////////////
 
 /*
@@ -106,7 +121,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log('expression')
 
 
 
@@ -121,7 +136,9 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+const exclaimThree = str => `${str.toUpperCase()}!!!`
+
+console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -146,7 +163,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -161,7 +178,17 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+function nameCheck(name){
+  if (name === 'Steven'){
+    return console.log(`What is up ${name}?`);
+  } else if (name === 'Bryan'){
+    return console.log(`What is up ${name}!`);
+  } else {
+    return console.log(`Cool name, ${name}!`);
+  }
+}
 
+let nameGreeting = nameCheck('Alan')
 ////////////////// PROBLEM 11 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
@@ -174,16 +201,39 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+function faveColorFinder(color){
+  if (color === 'red'){
+    return console.log('red is a great color');
+  } else if (color === 'green'){
+    return console.log('green is a solid favorite color');
+  } else if (color === 'black'){
+    return console.log('so trendy');
+  }else {
+    return console.log('you need to evaluate your favorite color choice');
+  }
+}
+
+let colorRating = faveColorFinder('black')
+
 
 ////////////////// PROBLEM 12 ////////////////////
-let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
+
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
   Call the function, passing in the `namesArr` array (above).
 */
+let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
+
+function printAllNames(names){
+  for (i = 0; i < names.length; i++){
+    console.log(names[i]);
+  }
+}
+
+printAllNames(namesArr)      //Passing in the namesArr array for the function for loop
 
 
 ////////////////// PROBLEM 13 ////////////////////
@@ -196,6 +246,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+function thatsOdd(num){
+  if (num % 2 === 0){
+    return console.log("That's not odd!")
+  } else {
+    return console.log('That is odd indeed!')
+  }
+}
+
+let oddChecker = thatsOdd(6)
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -208,6 +267,11 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+
+const bestMovie = (movie) => `${movie} is the best movie ever!`;
+
+console.log( bestMovie('I Am Legend'))
+
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -223,6 +287,23 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
+function bigOrSmall(arr){
+  let answers = []
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] > 100){
+      answers.push('big')
+    }else {
+      answers.push('small')
+    }
+  }
+  return answers;
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+
+console.log(arrayEvaluator)
+
+
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -234,6 +315,18 @@ let loser = 'Glimmer'
 
 //CODE HERE
 
+function theEliminator(contestants, loser){
+  for (let i = 0; i < contestants.length; i++){
+    if (contestants[i] === loser){
+     contestants.splice(i, 1);
+    } 
+  }
+  return contestants;
+}
+
+let eliminator = theEliminator(contestants, loser)
+
+console.log(eliminator)
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
