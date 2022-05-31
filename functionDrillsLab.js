@@ -12,11 +12,11 @@
 */
 
 //CODE HERE
-function helloWorld('Hello, World!'){
-
+function helloWorld(){
+  console.log('Hello, World!') 
 }
 
-console.log(helloWorld)
+helloWorld()
 
 ////////////////// PROBLEM 2 ////////////////////
 
@@ -27,6 +27,12 @@ console.log(helloWorld)
 //CODE HERE
 
 
+
+const jsNinja = () => console.log('I am a JavaScript Ninja!');
+
+jsNinja();
+
+
 ////////////////// PROBLEM 3 ////////////////////
 /*
   Create a function called printName which takes in a person's name and console logs it.
@@ -35,6 +41,12 @@ console.log(helloWorld)
 */
 
 //CODE HERE
+
+function printName(name){     //Assigns the function name to printName, the parameter is name
+   console.log(name)          // Console log the name in the call argument
+}
+
+printName("Alan")             //Call argument
 
 
 ////////////////// PROBLEM 4 ////////////////////
