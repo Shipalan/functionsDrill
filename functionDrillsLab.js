@@ -13,10 +13,10 @@
 
 //CODE HERE
 function helloWorld(){
-  console.log('Hello, World!') 
+  console.log('helloWorld') 
 }
 
-helloWorld()
+
 
 ////////////////// PROBLEM 2 ////////////////////
 
@@ -28,9 +28,9 @@ helloWorld()
 
 
 
-const jsNinja = () => console.log('I am a JavaScript Ninja!');
+const jsNinja = () => 'I am a JavaScript Ninja!';
 
-jsNinja();
+console.log(jsNinja());
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -337,10 +337,11 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
-function capital(sampleString){
-  console.log(sampleString.toUpperCase)
+function capital(str){                   
+   console.log(str.toUpperCase());
 }
 
+capital(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -353,6 +354,19 @@ function capital(sampleString){
   return 'must provide a valid email address'
 */
 
+let email = ('shipley95@hotmail.com')
+
+function emailCheck(email){
+   email = email.toString('')
+   email = email.trim()
+  if (email.includes('@')){
+    return 'email verified';
+  } else {
+    return 'must provide a valid email address'
+  }
+}
+
+console.log(emailCheck(email))
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -361,7 +375,15 @@ function capital(sampleString){
 
 //CODE HERE
 
+let gold = 13
 
+
+function chocoFrogs(gold){
+  return gold / 3;
+}
+
+let totalFrogs = chocoFrogs(gold);
+console.log(totalFrogs)
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
@@ -369,7 +391,18 @@ function capital(sampleString){
 
 //CODE HERE
 
+function chocoFrogs2(gold){
+  if (gold % 3 === 0){
+    return gold / 3;
+  } else if ((gold - 1) % 3 === 0){
+    return ((gold - 1) / 3);
+  } else {
+    return ((gold - 2) / 3)
+  }
+}
 
+let totalFrogs2 = chocoFrogs2(gold)
+console.log(totalFrogs2)
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
@@ -377,6 +410,10 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+
+function (){
+  
+}
 
 
 ////////////////// PROBLEM 22 ////////////////////
